@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Default background color */
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .header {
+    width: 100%; /* Full width */
+    background-color: black; /* Black background for header */
+    color: goldenrod; /* Golden text color */
+    padding: 10px; /* Padding for the header */
+    text-align: center; /* Center align text */
+    font-size: 24px; /* Header font size */
+  }
+  
+  .layout {
+    display: flex; /* Flexbox for sidebar and main content */
+    flex-grow: 1; /* Take remaining height */
+  }
+  
+  .sidebar {
+    width: 200px; /* Sidebar width */
+    background-color: black; /* Black background for sidebar */
+    color: goldenrod; /* Golden text color */
+    padding: 20px;
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar a {
+    color: goldenrod; /* Bright link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  .sidebar a:hover {
+    color: #ffd700; /* Brighter color on hover */
+  }
+  
+  .main {
+    flex-grow: 1; /* Take up remaining space */
+    padding: 20px;
+    background-color: white; /* Default main background */
+    color: black; /* Default text color */
+    position: relative; /* Allow positioning of toggle button */
+  }
+  
+  .dark .sidebar {
+    background-color: #333; /* Darker background for sidebar in dark mode */
+  }
+  
+  .dark .main {
+    background-color: black; /* Black background for main content in dark mode */
+    color: goldenrod; /* Golden text color in dark mode */
+  }
+  
+  /* Styling for the toggle button */
+  .toggle-button {
+    position: absolute; /* Position it relative to the main content */
+    top: 20px; /* Adjust vertical position */
+    right: 20px; /* Position it on the right */
+    padding: 5px; /* Small padding */
+    font-size: 16px; /* Slightly smaller font size */
+    background-color: goldenrod; /* Background color */
+    color: black; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Cursor pointer on hover */
+  }
+  
+  .toggle-button i {
+    font-size: 12px; /* Icon size */
+  }
+  
