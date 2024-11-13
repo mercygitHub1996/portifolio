@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { FaToggleOn, FaToggleOff } from 'react-icons/fa';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
@@ -25,7 +26,11 @@ const App = () => {
         </div>
         <div className="main">
           <button className="toggle-button" onClick={toggleTheme}>
-            <i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`}></i>
+          {theme == "light" ? (
+        <FaToggleOn size={24} color="green" /> // Display toggle on icon with styling
+      ) : (
+        <FaToggleOff size={24} color="gray" /> // Display toggle off icon with styling
+      )}
           </button>
           <Routes>
             <Route path="/" element={<Home />} />
